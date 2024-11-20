@@ -1,3 +1,3 @@
-module github.com/chrj/smtpd
+module github.com/Simply-Bits/smtpd
 
-go 1.14
+go 1.23.1

@@ -61,6 +61,9 @@ func parseLine(line string) (cmd command) {
 }
 
 func (session *session) handle(line string) {
+	if session.peer.ProtocolLogger != nil {
+		session.peer.ProtocolLogger.Printf("%s << %s", session.conn.RemoteAddr(), line)
+	}
 
 	cmd := parseLine(line)
 
